@@ -3,8 +3,6 @@ import * as dynamoDbLib from "./libs/dynamodb-lib";
 import { failure, success } from "./libs/response-lib";
 
 export async function main(event, context) {
-  uuid.abc.gibberish; // FIXME: runtime error
-
   const data = JSON.parse(event.body);
   const params = {
     TableName: process.env.tableName,
